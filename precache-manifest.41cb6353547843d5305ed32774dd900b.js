@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/kraichana/browserconfig.xml"
   },
   {
-    "revision": "e35da4468e011ef5e903",
-    "url": "/kraichana/css/app.a7a2f31f.css"
+    "revision": "e720fd032a5e57ac3f5a",
+    "url": "/kraichana/css/app.88648ba9.css"
   },
   {
     "revision": "7d1d6a44dbdb7ee1e04e",
@@ -36,20 +36,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/kraichana/css/chunk-1e795822.ce980cc7.css"
   },
   {
-    "revision": "8716142f2ebfd5708132",
-    "url": "/kraichana/css/chunk-5ba067de.a302134c.css"
+    "revision": "5b6060e8b0ba26f95151",
+    "url": "/kraichana/css/chunk-28dd0e32.05d6690d.css"
   },
   {
     "revision": "de2cd7a07dc63ba409fd",
     "url": "/kraichana/css/chunk-68ce3660.19f55679.css"
   },
   {
-    "revision": "433f5b39d75268693db3",
-    "url": "/kraichana/css/chunk-a5f3fc28.f404b501.css"
-  },
-  {
-    "revision": "705043bf043e64795025",
-    "url": "/kraichana/css/chunk-a9c80a02.41cde33e.css"
+    "revision": "8de06926875012fb1111",
+    "url": "/kraichana/css/chunk-a7458da6.030f42b4.css"
   },
   {
     "revision": "661048c20f800e8e6e2f60bc8eb85765",
@@ -88,12 +84,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/kraichana/img/logo_with_text.2fb35af1.png"
   },
   {
-    "revision": "eed9681077c38b0686507f4bde6b0edd",
+    "revision": "5dcd70bcf3dd33e089499f792d0f9655",
     "url": "/kraichana/index.html"
   },
   {
-    "revision": "e35da4468e011ef5e903",
-    "url": "/kraichana/js/app.a35cc3af.js"
+    "revision": "e720fd032a5e57ac3f5a",
+    "url": "/kraichana/js/app.364e456a.js"
   },
   {
     "revision": "7d1d6a44dbdb7ee1e04e",
@@ -112,20 +108,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/kraichana/js/chunk-1e795822.151b4247.js"
   },
   {
-    "revision": "8716142f2ebfd5708132",
-    "url": "/kraichana/js/chunk-5ba067de.4940f329.js"
+    "revision": "5b6060e8b0ba26f95151",
+    "url": "/kraichana/js/chunk-28dd0e32.d95feeba.js"
   },
   {
     "revision": "de2cd7a07dc63ba409fd",
     "url": "/kraichana/js/chunk-68ce3660.79cbafa0.js"
   },
   {
-    "revision": "433f5b39d75268693db3",
-    "url": "/kraichana/js/chunk-a5f3fc28.044aea74.js"
-  },
-  {
-    "revision": "705043bf043e64795025",
-    "url": "/kraichana/js/chunk-a9c80a02.b2431b16.js"
+    "revision": "8de06926875012fb1111",
+    "url": "/kraichana/js/chunk-a7458da6.8ba1851f.js"
   },
   {
     "revision": "52f6f5f217ce5b61c8e9",
