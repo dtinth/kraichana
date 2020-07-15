@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <div class="qrcode">
+  <main class="app-main qrshare">
+    <div style="display:flex;justify-content:center">
       <vue-qr
         :logoSrc="logo"
         :bgSrc="bg"
@@ -10,18 +10,18 @@
         :dotScale="dotScale"
       />
     </div>
-    <div class="detail">
+    <div style="text-align:center">
       <h2>{{ getDetail.shopName }}</h2>
       <p>{{ getDetail.businessType }}</p>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
-import VueQr from "vue-qr";
-import storeGetter from "@/store/getter.js";
-import logoImg from "@/assets/logo.png";
 import bgImg from "@/assets/bg.png";
+import logoImg from "@/assets/logo.png";
+import storeGetter from "@/store/getter.js";
+import VueQr from "vue-qr";
 
 export default {
   name: "ShopDetail",
@@ -46,19 +46,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss" scoped>
-.container {
-  margin-top: 2rem;
-  padding: 0 20px;
-}
-
-.qrcode {
-  display: flex;
-  justify-content: center;
-}
-
-.detail {
-  text-align: center;
-}
-</style>

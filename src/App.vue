@@ -33,9 +33,12 @@ export default {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("IBM Plex Sans Thai"), local("IBMPlexSansThai-Regular"),
-    url("assets/fonts/IBMPlexSansThai-Regular.woff2") format("woff2"),
-    url("assets/fonts/IBMPlexSansThai-Regular.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/IBM/plex/IBM-Plex-Sans-Thai/fonts/complete/woff2/IBMPlexSansThai-Regular.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/IBM/plex/IBM-Plex-Sans-Thai/fonts/complete/woff/IBMPlexSansThai-Regular.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/IBM/plex/IBM-Plex-Sans-Thai/fonts/complete/ttf/IBMPlexSansThai-Regular.ttf")
+      format("truetype");
 }
 
 @font-face {
@@ -43,9 +46,12 @@ export default {
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local("IBM Plex Sans Thai Bold"), local("IBMPlexSansThai-Bold"),
-    url("assets/fonts/IBMPlexSansThai-Bold.woff2") format("woff2"),
-    url("assets/fonts/IBMPlexSansThai-Bold.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/IBM/plex/IBM-Plex-Sans-Thai/fonts/complete/woff2/IBMPlexSansThai-Bold.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/IBM/plex/IBM-Plex-Sans-Thai/fonts/complete/woff/IBMPlexSansThai-Bold.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/IBM/plex/IBM-Plex-Sans-Thai/fonts/complete/ttf/IBMPlexSansThai-Bold.ttf")
+      format("truetype");
 }
 
 html {
@@ -92,30 +98,30 @@ hr {
 // CUSTOM COMPONENTS
 // ---
 
-// Large box item
-// Snipped: .list-item
+main.app-main {
+  margin-top: 2rem;
+  padding: 0 20px;
+}
+
 .list-item {
   box-shadow: rgba(0, 0, 0, 0.03) 0px 0px 4px;
   background-color: white;
   cursor: pointer;
-  color: rgb(102, 102, 102);
+  color: #666;
   padding: 14px 16px;
-  border: 1px solid rgb(238, 238, 238);
+  border: 1px solid #eee;
   margin-bottom: 16px;
   position: relative;
 
   &:hover {
-    background-color: rgb(250, 255, 251);
+    background-color: #fafffb;
   }
 }
 
-// Horizontal layout where one element is spanning across and one are keep small
-// Snipped: .media>[any]+.body, .media>.body+[any]
-// .center,.bottom is the modifier for .media
-.media {
+.columns {
   display: flex;
 
-  &.center {
+  &.middle {
     align-items: center;
   }
 
@@ -123,7 +129,7 @@ hr {
     align-items: flex-end;
   }
 
-  > .body {
+  > .expanded {
     flex: 1 1 0;
   }
 }

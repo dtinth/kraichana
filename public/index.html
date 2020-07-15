@@ -10,14 +10,33 @@
   <meta name="title" content="ใครชนะ?" />
   <meta name="description" content="ป้องกันการแพร่ระบาด COVID-19" />
 
-  <!-- Fonts -->
+  <!-- Preconnect -->
   <link rel="preconnect" href="https://storage.googleapis.com">
   <link rel="dns-prefetch" href="https://storage.googleapis.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+  <!-- Fonts -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="https://cdn.jsdelivr.net/gh/IBM/plex/IBM-Plex-Sans-Thai/fonts/complete/woff2/IBMPlexSansThai-Regular.woff2">
+  <link rel="preload" as="font" type="font/woff" crossorigin
+    href="https://cdn.jsdelivr.net/gh/IBM/plex/IBM-Plex-Sans-Thai/fonts/complete/woff/IBMPlexSansThai-Regular.woff">
+  <link rel="preload" as="font" type="font/ttf" crossorigin
+    href="https://cdn.jsdelivr.net/gh/IBM/plex/IBM-Plex-Sans-Thai/fonts/complete/ttf/IBMPlexSansThai-Regular.ttf">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="https://cdn.jsdelivr.net/gh/IBM/plex/IBM-Plex-Sans-Thai/fonts/complete/woff2/IBMPlexSansThai-Bold.woff2">
+  <link rel="preload" as="font" type="font/woff" crossorigin
+    href="https://cdn.jsdelivr.net/gh/IBM/plex/IBM-Plex-Sans-Thai/fonts/complete/woff/IBMPlexSansThai-Bold.woff">
+  <link rel="preload" as="font" type="font/ttf" crossorigin
+    href="https://cdn.jsdelivr.net/gh/IBM/plex/IBM-Plex-Sans-Thai/fonts/complete/ttf/IBMPlexSansThai-Bold.ttf">
   <link
-    rel="stylesheet"
+    rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
     href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css" />
+  <link
+    rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.min.css" />
 
   <!-- FAVICON & COLORS -->
   <link rel="apple-touch-icon" sizes="180x180" href="<%= BASE_URL %>apple-touch-icon.png">
@@ -37,18 +56,15 @@
   </noscript>
   <div id="app"></div>
   <!-- built files will be auto injected -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-59441941-13"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-59441941-13"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'UA-59441941-13');
-</script>
+    gtag('config', 'UA-59441941-13');
+  </script>
 </body>
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.min.css" />
 
 </html>

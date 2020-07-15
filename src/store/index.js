@@ -62,6 +62,12 @@ const store = new Vuex.Store({
           `${shop.appId}.${shop.shopId}` !== `${value.appId}.${value.shopId}`
       );
     },
+    removeHistory(state, value) {
+      state.shopHistory = state.shopHistory.filter(
+        shop =>
+          `${shop.appId}.${shop.shopId}` !== `${value.appId}.${value.shopId}`
+      );
+    },
     clearHistory(state) {
       state.shopHistory = [];
     }
@@ -76,6 +82,9 @@ const store = new Vuex.Store({
     },
     deleteFavorite(context, value) {
       context.commit("removeFavorite", value);
+    },
+    deleteHistory(context, value) {
+      context.commit("removeHistory", value);
     },
     clearHistory(context) {
       context.commit("clearHistory");

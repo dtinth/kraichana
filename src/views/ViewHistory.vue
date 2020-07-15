@@ -1,36 +1,30 @@
 <template>
-  <div class="view-history">
-    <div class="media center" style="margin-bottom:.4rem">
-      <h1 class="body">ประวัติสถานที่</h1>
+  <main class="app-main view-history" style="margin-top:1rem">
+    <div class="columns middle" style="margin-bottom:.4rem">
+      <h1 class="expanded">ประวัติสถานที่</h1>
       <div @click="clearHistory()"><i class="fas fa-trash-alt fa-2x"></i></div>
     </div>
     <app-empty-state v-if="!getHistory.length" name="ประวัติสถานที่" />
-    <div
+    <app-list-item
       v-for="(shop, index) in getHistory"
       :key="index"
-      class="list-item"
-      @click="gotoShop(shop)"
-    >
-      <div class="media">
-        <app-shopping-icon />
-        <div class="body" style="margin-left:10px">
-          <h2>{{ shop.shopName }}</h2>
-          <p>{{ shop.businessType }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
+      v-bind="shop"
+      @click.native="gotoShop(shop)"
+      @remove="removeHistory"
+      removable
+    />
+  </main>
 </template>
 
 <script>
-import AppShoppingIcon from "@/components/AppShoppingIcon";
 import AppEmptyState from "@/components/AppEmptyState";
+import AppListItem from "@/components/AppListItem";
 import storeGetter from "@/store/getter.js";
 
 export default {
   name: "ViewHistory",
   components: {
-    AppShoppingIcon,
+    AppListItem,
     AppEmptyState
   },
   computed: {
@@ -44,18 +38,19 @@ export default {
     clearHistory() {
       if (
         confirm(
-          "ต้องการล้างประวัติสถานที่หรือไม่?\nข้อมูลสถานที่ทั้งหมดจะถูกลบ และไม่สามารถกู้คืนได้!"
+          "ต้องการล้างประวัติสถานที่หรือไม่?\nข้อมูลสถานที่ทั้งหมดจะถูกลบ และไม่สามารถกู้คืนได้"
         )
       )
         this.$store.dispatch("clearHistory");
+    },
+    removeHistory(data) {
+      if (
+        confirm(
+          "ต้องการลบประวัติร้านนี้หรือไม่?\nเมื่อลบแล้วข้อมูลของร้านนี้จะไม่สามารถกู้คืนได้อีก"
+        )
+      )
+        this.$store.dispatch("deleteHistory", data);
     }
   }
 };
 </script>
-
-<style scoped>
-.view-history {
-  margin-top: 1rem;
-  padding: 0 20px;
-}
-</style>

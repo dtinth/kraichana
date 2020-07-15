@@ -1,30 +1,39 @@
 <template>
   <nav class="main-navbar" role="navigation" aria-label="main navigation">
-    <section class="home">
+    <section class="side">
       <a v-if="currentPath !== '/'" @click="$router.go(-1)"
         ><i class="fas fa-arrow-left fa-2x"></i
       ></a>
     </section>
     <section class="title">
-      <div style="position:relative;display:inline-block;">
-        <img
-          class="img-fluid"
-          style="height:36px"
-          src="@/assets/logo_with_text.png"
-          alt="ใครชนะ?"
-        />
-        <span style="position:absolute;bottom:0;right:0;display:block;text-align:right;font-size:10px;transform:rotate(-12deg) translate(42px,12px);transform-origin:bottom right;">
-            <span style="background:#353433;color:#d7fc70;padding:0 2px">but it’s</span>
-            <br>
-            <span style="background:#353433;color:#d7fc70;padding:0 2px">actually usable</span>
+      <div
+        style="position:relative;display:inline-block;"
+        @click="$router.go(-1)"
+      >
+        <picture>
+          <source srcset="@/assets/logo_horiz.webp" type="image/webp" />
+          <source srcset="@/assets/logo_horiz.png" type="image/png" />
+          <img
+            class="img-fluid"
+            style="height:36px"
+            src="@/assets/logo_horiz.png"
+            alt="ใครชนะ?"
+          />
+        </picture>
+        <span
+          style="position:absolute;bottom:0;right:0;display:block;text-align:right;font-size:10px;transform:rotate(-12deg) translate(42px,12px);transform-origin:bottom right;"
+        >
+          <span style="background:#353433;color:#d7fc70;padding:0 2px"
+            >but it’s</span
+          >
+          <br />
+          <span style="background:#353433;color:#d7fc70;padding:0 2px"
+            >actually usable</span
+          >
         </span>
       </div>
     </section>
-    <section class="qr">
-      <router-link v-if="currentPath !== '/'" to="/"
-        ><i class="fas fa-qrcode fa-2x"></i
-      ></router-link>
-    </section>
+    <section class="side"></section>
   </nav>
 </template>
 
@@ -63,8 +72,7 @@ export default {
     align-items: center;
   }
 
-  > .home,
-  > .qr {
+  > .side {
     width: 36px;
     height: 36px;
     position: relative;

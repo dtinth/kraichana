@@ -1,9 +1,12 @@
 <template>
-  <div class="shopdetail">
+  <main class="app-main shopdetail">
     <span style="color:#353433;background:#d7fc70;padding:0 0.5ex;"
       >@dtinth’s fork added thaichana iframe:</span
     >
     <iframe
+      :title="
+        `https://qr.thaichana.com/?appId=${getDetail.appId}&shopId=${getDetail.shopId}`
+      "
       frameborder="0"
       width="100%"
       style="width:100%;height:440px;border:2px solid #d7fc70;"
@@ -34,7 +37,7 @@
       icon="fa-star"
       type="success"
     />
-  </div>
+  </main>
 </template>
 
 <script>
@@ -68,30 +71,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss" scoped>
-.shopdetail {
-  margin-top: 2rem;
-  padding: 0 20px;
-}
-
-.btn {
-  display: block;
-  padding: 20px;
-  color: black;
-  background: #fcfcfd;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 5px;
-  color: #287fe4;
-  text-align: center;
-}
-
-.columns {
-  display: flex;
-  margin-top: 8px;
-}
-
-.column {
-  flex: 1 1 0;
-}
-</style>
